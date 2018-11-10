@@ -42,7 +42,7 @@ births.index = pd.to_datetime(10000 * births['year'] + 100 * births['month'] + b
 births['dayofweek'] = births.index.dayofweek
 print(births.head())
 
-#plot by dayofweek
+#plot based on  dayofweek
 births.pivot_table('births', index='dayofweek', columns='decade', aggfunc='mean').plot()
 plt.gca().set_xticks(range(0, 7))
 plt.gca().set_xticklabels(['Mon', 'Tue', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'])
